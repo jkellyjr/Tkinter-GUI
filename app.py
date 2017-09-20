@@ -58,8 +58,12 @@ class IntroApp_TK(Tkinter.Tk):
         self.msgEntry.focus_set()
         self.msgEntry.selection_range(0, Tkinter.END)
 
+    # !! Implement Messaging Module !!
     def onYesCheckButtonClick(self):
-        print 'need to write message sending class'
+        self.targetLabelVariable.set('Message Sent!')
+        self.msgEntryVariable.set('')
+        self.msgEntry.focus_set()
+        self.msgEntry.selection_range(0, Tkinter.END)
 
     def onNoCheckButtonClick(self):
         self.targetLabelVariable.set('Okay, the message will not be sent. Try a new one!')
